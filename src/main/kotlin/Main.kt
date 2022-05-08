@@ -108,6 +108,14 @@ fun holdArrays(arr: Int): Int {
                 "offering and a sacrifice\n to God for a sweetsmelling savour.\""
     )
 
+        // list of random quotes from these lists
+        var randomQuotes = listOf(
+            "1 Nephi 20:10 -\n \"For, behold, I have refined thee, I have chosen thee in the furnace of affliction.\"",
+            "Quran 8:33 -\n \"And Allah would not punish them while they seek forgiveness\"",
+            "1 Corinthians 10:31 -\n \"Whether therefore ye eat, or drink, or whatsoever ye do, do all to the " +
+                    "glory of God.\""
+        )
+
     when (arr) {
         1 -> {
             println(listOfBoMQuotes.random())
@@ -122,7 +130,10 @@ fun holdArrays(arr: Int): Int {
             return 0
         }
         else -> {
-            println("Invalid selection.")
+            println("Invalid selection. Here are a few quotes you might find:")
+            for(x in listOfBoMQuotes) {
+                println(x + "\n")
+            }
             return 0
         }
     }
